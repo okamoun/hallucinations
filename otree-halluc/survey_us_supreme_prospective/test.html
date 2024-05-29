@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/otree/css/theme.css">
+
+    <script src="/static/otree/js/jquery-3.2.1.min.js"></script>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="otree-body container">
+    <h2 class="otree-title page-header" id="_otree-title">Identity</h2>
+
+    <script>var js_vars = {};</script>
+    <form class="otree-form" method="post" role="form" id="form" autocomplete="off">
+        <script src="/static/otree/js/formInputs.js"></script>
+        <div class="_otree-content">
+<!-- (((((((((((((((((((((((((((((((((((((((((((((((((((((((( CONTENT BLOCK -->
+
+            <table>
+                <tr>
+                    <th>Give 4 words to describe<br>reform partisan</th>
+                    <th>-----</th>
+                    <th>Give 4 words to describe<br>reform opponent</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="mb-3 _formfield">
+                            <label class="col-form-label" for="id_ph2_left_1"></label>
+                            <div class="controls">
+                                <input type="text" class="form-control" id="id_ph2_left_1" name="ph2_left_1" required value="">
+                            </div>
+                        </div>
+                    </td>
+                    <td></td>
+                    <td>
+                        <div class="mb-3 _formfield">
+                            <label class="col-form-label" for="id_ph2_right_1"></label>
+                            <div class="controls">
+                                <input type="text" class="form-control" id="id_ph2_right_1" name="ph2_right_1" required value="">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Repeat the rows for the remaining inputs -->
+            </table>
+
+            <p>
+                <button class="otree-btn-next btn btn-primary">Next</button>
+            </p>
+
+
+<!-- )))))))))))))))))))))))))))))))))))))))))))))))))))))))) END OF CONTENT BLOCK -->
+        </div>
+    </form>
+    <br/>
+
+</div>
+
+<script src="/static/otree/js/internet-explorer.js"></script>
+<script src="/static/otree/js/reconnecting-websocket-iife.min.js"></script>
+<script src="/static/bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script src="/static/otree/js/common.js"></script>
+<script id="websocket-redirect" src="/static/otree/js/page-websocket-redirect.js"
+        data-socket-url="/auto_advance?participant_code=wv8uh8i3&page_index=10"
+        data-is-debug=""
+></script>
+
+</body>
+</html>
