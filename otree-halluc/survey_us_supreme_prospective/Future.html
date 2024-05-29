@@ -1,0 +1,16 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}Next {{player.time_frame_future}} years{{ endblock }}
+
+{{ block content }}
+
+Looking at the time frame of the next {{player.time_frame_future}} years
+
+
+{{ formfield 'future_influence_society' label=future_influence_society_label}}
+{{ formfield 'future_like_you' label=future_like_you_label}}
+{{ formfield 'open_ended_future' }}
+
+
+{{ next_button }}
+
+{{ endblock }}
