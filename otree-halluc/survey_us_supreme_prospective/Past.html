@@ -1,0 +1,24 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}Survey United States Supreme Court{{ endblock }}
+
+{{ block content }}
+
+
+
+Many people talk about the United States Supreme Court in terms of specific decision-making eras. Since {%  player.from_date() %}, the Supreme Court has made many decisions about individual rights, civil liberties, economic issues, and politics.
+
+{{ formfield 'influence_society' label=influence_society_label  }}
+
+
+
+{{ formfield 'influence_like_you'  label=influence_like_you_label  }}
+
+
+
+{{ formfield 'open_ended_past'   }}
+
+
+
+{{ next_button }}
+
+{{ endblock }}
