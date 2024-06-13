@@ -1,12 +1,18 @@
 from os import environ
 
 SESSION_CONFIGS =   [dict(name='kt_prospective_html', num_demo_participants=4, gpt_cache=False,BotType='html',
-                        app_sequence=['kt_prospective', 'thanks'],
+                        app_sequence=['kt_prospective', 'thanks'],default_engine_param={"model": "gpt-3.5-turbo", "n": 2},
                          profile_file ='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/kt_propect/data/modified_exclusions/pt_replication_modified_exclusions_data_shuffled.csv'),
                    dict(name='kt_prospective_dialogue', num_demo_participants=4, gpt_cache=False, BotType='dialog',
                         app_sequence=['kt_prospective', 'thanks'],
                         profile_file='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/kt_propect/data/modified_exclusions/pt_replication_modified_exclusions_data_shuffled.csv'),
-                   dict(name='kt_prospective_temp0', num_demo_participants=4, gpt_cache=False,
+                dict(name='kt_dialogue_GPT4o', num_demo_participants=4, gpt_cache=False, BotType='dialog',
+                          app_sequence=['kt_prospective', 'thanks'], default_engine_param={"model": "gpt-4o","n":2},
+                          profile_file='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/kt_propect/data/modified_exclusions/pt_replication_modified_exclusions_data_shuffled.csv'),
+                 dict(name='kt_html_GPT4o', num_demo_participants=4, gpt_cache=False, BotType='html',
+                      app_sequence=['kt_prospective', 'thanks'], default_engine_param={"model": "gpt-4o", "n": 2},
+                      profile_file='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/kt_propect/data/modified_exclusions/pt_replication_modified_exclusions_data_shuffled.csv'),
+                     dict(name='kt_prospective_temp0', num_demo_participants=4, gpt_cache=False,
                         app_sequence=['kt_prospective','us_profile', 'thanks'],default_engine_param={'temperature':0},
                         profile_file='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/kt_propect/data/modified_exclusions/pt_replication_modified_exclusions_data_shuffled.csv'),
                    dict (name='kt_prospective_no_profile', num_demo_participants=4, gpt_cache=False,
@@ -19,7 +25,7 @@ SESSION_CONFIGS =   [dict(name='kt_prospective_html', num_demo_participants=4, g
                                    "educ",
                                    "religion", 'residence', 'ownhome'],
                         profile_file='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/us_court_survey/full_survey_label_shuffled.csv',
-                      app_sequence=['us_profile', 'survey_us_supreme_prospective', 'us_reform', 'thanks']),,
+                      app_sequence=['us_profile', 'survey_us_supreme_prospective', 'us_reform', 'thanks']),
                  dict(name='USCourtProspective_dialog', num_demo_participants=20, BotType='dialog', gpt_cache=False,
                       profile_seq=["sex", "age",
                                    "last_elect",
@@ -69,9 +75,9 @@ SESSION_CONFIGS =   [dict(name='kt_prospective_html', num_demo_participants=4, g
                                   "educ",
                                   "religion", 'residence', 'ownhome'],
                           profile_file='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/us_court_survey/full_survey_label_shuffled.csv',
-                          app_sequence=[ 'survey_us_supreme_prospective', 'us_reform', 'thanks']),
-
+                          app_sequence=[ 'survey_us_supreme_prospective', 'us_reform', 'thanks'])
                      ]
+
 
 
 SESSION_CONFIG_DEFAULTS = dict(
