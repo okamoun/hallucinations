@@ -75,7 +75,19 @@ SESSION_CONFIGS =   [dict(name='kt_prospective_html', num_demo_participants=4, g
                                   "educ",
                                   "religion", 'residence', 'ownhome'],
                           profile_file='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/us_court_survey/full_survey_label_shuffled.csv',
-                          app_sequence=[ 'survey_us_supreme_prospective', 'us_reform', 'thanks'])
+                          app_sequence=[ 'survey_us_supreme_prospective', 'us_reform', 'thanks']),
+                     dict(name='us_profile_html', num_demo_participants=20, gpt_cache=False, BotType='html',
+                          profile_file='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/us_court_survey/full_survey_label_shuffled.csv',
+                          app_sequence=['us_profile', 'thanks']),
+                     dict(name='us_profile_dialog', num_demo_participants=20, gpt_cache=False, BotType='dialog',
+                          profile_file='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/us_court_survey/full_survey_label_shuffled.csv',
+                          app_sequence=['us_profile', 'thanks']),
+                     dict(name='us_profile_html_gpt4', num_demo_participants=20, gpt_cache=False, BotType='html', default_engine_param={"model": "gpt-4o","n":2},
+                          profile_file='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/us_court_survey/full_survey_label_shuffled.csv',
+                          app_sequence=['us_profile', 'thanks']),
+                     dict(name='us_profile_dialog_gpt4', num_demo_participants=20, gpt_cache=False, BotType='dialog', default_engine_param={"model": "gpt-4o","n":2},
+                          profile_file='/Users/olivierkamoun/PycharmProjects/tau_thesis_tools/us_court_survey/full_survey_label_shuffled.csv',
+                          app_sequence=['us_profile', 'thanks']),
                      ]
 
 

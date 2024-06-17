@@ -383,8 +383,11 @@ class GPTBotDyna(otree.api.Bot):
         for c in results:
             dform_txt = c
             try:
-                logging.info(f'analysisng {dform_txt}')
-                dform = json.loads(dform_txt)
+                logging.info(f'analysisng dform_txt {dform_txt}')
+                m = dform_txt
+                clean_t = m[m.find('{'):m.rfind('}') + 1]
+                logging.info(f'analysisng clean_t {clean_t}')
+                dform = json.loads(clean_t)
                 if len(dform) > nb_fields:
                     clean_dform = {k: v for k, v in dform.items() if v is not None and len(str(v)) > 0}
                 else :

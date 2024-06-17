@@ -15,8 +15,10 @@ class PlayerBot(Bot,GPTBotDyna):
     cases = ['gpt']
 
     use_profile = True
-
-    ptp = ProfileToPromptUS()
+    ptp = ProfileToPromptUS(profile_seq=["sex", "age",
+                "last_elect",
+                "educ",
+                "religion"  ,'residence','ownhome'  ])
     inputs_cases= {'basic':{''}}
 
 
